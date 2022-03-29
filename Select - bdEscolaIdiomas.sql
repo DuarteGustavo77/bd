@@ -19,7 +19,7 @@ SELECT*FROM bdEscolaIdiomas
     WHERE dataMatricula BETWEEN '01/05/2016' AND '31/05/2016'
 
 --5 Apresentar o nome dos alunos em ordem alfabética ao lado do nome das turmas em que estão matriculados 
-    SELECT 
+    
 
 --6 Apresentar o nome dos cursos e os horários em que eles são oferecidos
     SELECT nomeCurso FROM tbCurso
@@ -30,9 +30,12 @@ SELECT*FROM bdEscolaIdiomas
     WHERE naturalidadeAluno
 
 --8)Apresentar o nome dos alunos ao lado da data de matrícula no formato dd/mm/aaaa
-
+     SELECT nomeAluno FROM tbAluno
+     INNER JOIN = tbmatricula ON tbmatricula.codAluno = tbmatricula.dataMatricula
 
 --9)Apresentar os alunos cujo nome comece com 'A' e que estejam matriculados no curso de inglês
 
 
---10)Apresentaraquantidadedematriculasfeitasnoanode2016
+--10)Apresentar a quantidade de matriculas feitas no ano de 2016
+     SELECT COUNT(codMatricula) FROM tbmatricula
+     WHERE dataMatricula BETWEEN '01/01/2016' AND '31/12/2016'
